@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E69B50A1-EF59-4FBB-BB46-A2B16D204008}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		PizzaOrdering.vsmdi = PizzaOrdering.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.Presentation", "Pizza.Presentation\Pizza.Presentation.csproj", "{805133AF-804A-4225-862B-45526946BE6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.Test", "Pizza.Test\Pizza.Test.csproj", "{05538FC2-E5E3-42BE-937E-638F943852E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.DataAccess", "Pizza.DataAccess\Pizza.DataAccess.csproj", "{75425795-DF76-4F8D-B452-EB1024ACE183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.Model", "Pizza.Model\Pizza.Model.csproj", "{FF5A19B1-2D0B-4154-9F28-AD816A59A18E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{805133AF-804A-4225-862B-45526946BE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{805133AF-804A-4225-862B-45526946BE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{805133AF-804A-4225-862B-45526946BE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{805133AF-804A-4225-862B-45526946BE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05538FC2-E5E3-42BE-937E-638F943852E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05538FC2-E5E3-42BE-937E-638F943852E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05538FC2-E5E3-42BE-937E-638F943852E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05538FC2-E5E3-42BE-937E-638F943852E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75425795-DF76-4F8D-B452-EB1024ACE183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75425795-DF76-4F8D-B452-EB1024ACE183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75425795-DF76-4F8D-B452-EB1024ACE183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75425795-DF76-4F8D-B452-EB1024ACE183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5A19B1-2D0B-4154-9F28-AD816A59A18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5A19B1-2D0B-4154-9F28-AD816A59A18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5A19B1-2D0B-4154-9F28-AD816A59A18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5A19B1-2D0B-4154-9F28-AD816A59A18E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = PizzaOrdering.vsmdi
+	EndGlobalSection
+EndGlobal

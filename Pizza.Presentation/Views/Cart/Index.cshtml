@@ -1,0 +1,62 @@
+﻿@model Dictionary<Pizza.Model.Product, int>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+<h2>My cart</h2>
+@{
+    if (Model.Count() == 0)
+    {
+    <h3>
+        Your cart is empty</h3>
+    }
+    else
+    {
+        double sum = 0;
+    <table>
+        <tr>
+            <th style="width: 50px">
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+               Quantity
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style= "vertical-align: top">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Key.Id })
+                </td>
+                <td style= "vertical-align: top; width:120px;" >
+                    @item.Key.Name
+                </td>
+                <td style= "vertical-align: top; width:80px">
+                    @String.Format("{0:F}", item.Key.Price)
+                    @{
+               sum = sum + item.Key.Price*item.Value;
+                    }
+                </td>
+                <td style= "vertical-align: top; width:350px">
+                    @item.Key.Description <br /><br />
+                </td>
+                <td style= "vertical-align: top;">
+                    @item.Value
+                </td>
+            </tr>
+        }
+    </table>
+    <h2 style="padding-left:150px" >
+        Total: @sum
+    </h2>
+    <a href="/User/Create">Check out</a>
+    }
+}

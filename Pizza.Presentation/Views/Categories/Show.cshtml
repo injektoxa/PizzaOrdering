@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Pizza.Model.Product>
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/_Layout.cshtml";
+}
+<table align="center" width="100%">
+    <tr style="width: 120px;">
+        <th style="width: 120px">
+            Name
+        </th>
+        <th style="width: 80px">
+            Price
+        </th>
+        <th style="width: 400px">
+            Description
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="vertical-align: top">
+                @item.Name
+            </td>
+            <td style="vertical-align: top; text-align: center;">
+                @String.Format("{0:F}", item.Price)
+            </td>
+            <td style="vertical-align: top">
+                @item.Description
+                <br>
+                <br>
+                <br>
+            </td>
+    
+            <td style="vertical-align: top">
+                <a href="/Cart/Buy/@item.Id">
+                    <img src="/Content/Theme/button.jpg" /></a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,170 @@
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background: font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	background-color: #CCCCCC;
+}
+
+ h2 {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ }
+
+h2 {
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+h3 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 11px;
+}
+
+p, blockquote, ul, ol {
+	line-height: 18px;
+	text-align: justify;
+}
+
+blockquote {
+	padding-left: 20px;
+	background: url(images/img05.gif) repeat-y;
+}
+
+a {
+	color: #F49500;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Header */
+
+#header
+{
+	width: 760px;
+	height: 180px;
+	margin: 0 auto;
+	background-color: #999999;
+}
+
+#header h1, #header h2 {
+	text-transform: lowercase;
+	font-weight: normal;
+}
+
+#header h1 {
+	float: left;
+	padding: 120px 0 0 20px;
+	font-size: 36px;
+}
+
+#header h2 {
+	float: right;
+	padding: 134px 20px 0 0;
+	font-size: 22px;
+}
+
+/* Menu */
+
+#menu
+{
+	width: 760px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: #C0C0C0;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	padding: 17px 20px 0 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#menu a:hover {
+	color: Gray;
+}
+
+#menu .first a {
+	background: none;
+}
+
+/* Content */
+
+#content
+{
+	width: 720px;
+	margin: 0 auto 20px auto;
+	padding: 20px;
+	background-color:White;
+	background-repeat: no-repeat;
+}
+
+/* Footer */
+
+#footer {
+	height: 10px;
+	padding: 20px;
+}
+
+#footer p {
+	text-align: center;
+	
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}

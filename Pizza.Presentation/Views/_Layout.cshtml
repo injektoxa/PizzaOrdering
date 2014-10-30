@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>@ViewBag.Title</title>
+<link href="@Url.Content("~/Content/Theme/default.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+	<h1>PIZZA</h1>
+	<h2>Pizza ordering</h2>
+</div><!-- end #header -->
+
+<div id="menu">
+	
+<a href="/home/about" >About</a>
+<a href="/categories/show?name=deserts" >Deserts</a>
+<a href="/categories/show?name=drinks">Drinks</a>
+<a href="/categories/show?name=pizzas">Pizzas</a>
+<a href ="/categories/show?name=salads">Salads</a>
+<a href="/categories" >Menu</a>
+<a href="/cart">Shopping cart</a>
+
+</div><!-- end #menu -->
+
+
+<div id="content">
+
+	  @RenderBody() 
+
+	<div style="clear: both;">&nbsp;</div>
+ </div><!-- end #content -->
+
+
+<div id="footer">
+	<p id="legal">No copyright at all, 2011 </p>
+	<hr style="width:760px"/>
+</div><!-- end #footer -->
+
+
+</body>
+</html>

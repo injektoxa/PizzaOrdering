@@ -1,0 +1,10 @@
+Pizza.DataAccess/bin/
+packages/
+Pizza.Model/bin/
+Pizza.Presentation/bin/
+Pizza.DataAccess/obj/
+Pizza.Model/obj/
+Pizza.Presentation/obj/
+PizzaOrdering.v12.suo
+Pizza.Test/obj/
+Pizza.Test/bin/
