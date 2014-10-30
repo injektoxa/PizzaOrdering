@@ -1,8 +1,15 @@
-﻿using System.Data.Entity;
+﻿using System.Configuration;
+using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
+using Pizza.DataAccess;
 using Pizza.Model;
+using Pizza.Model.Interfaces;
+using Pizza.Presentation.Controllers;
+using Unity.Mvc4;
 
 namespace Pizza.Presentation
 {
@@ -15,6 +22,21 @@ namespace Pizza.Presentation
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
             Database.SetInitializer<PizzaContext>(null);
+
+            CreateUnityContainer();
+        }
+
+        private void CreateUnityContainer()
+        {
+            // Create a new Unity dependency injection container
+            var unity = new UnityContainer();
+            unity.RegisterType<IRepository<Category>, SqlRepository<Category>>();
+
+            // Register the Controllers that should be injectable
+            unity.RegisterType<CategoriesController>();
+
+            // Finally, override the default dependency resolver with Unity
+            DependencyResolver.SetResolver(new UnityDependencyResolver(unity));
         }
 
         protected void Application_BeginRequest()

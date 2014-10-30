@@ -7,7 +7,7 @@ namespace Pizza.Presentation.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IRepository<Category> categories = new SqlRepository<Category>(AppManager.Context);
+        private readonly IRepository<Category> _categories = new SqlRepository<Category>(AppManager.Context);
 
         public ActionResult Index()
         {
@@ -51,7 +51,7 @@ namespace Pizza.Presentation.Controllers
 
         private Category GetCategoryByName(string name)
         {
-            return categories.FindOne(k => k.Name == name);
+            return _categories.FindOne(k => k.Name == name);
         }
     }
 }

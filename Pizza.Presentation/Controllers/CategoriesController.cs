@@ -8,10 +8,21 @@ namespace Pizza.Presentation.Controllers
 {
     public class CategoriesController : Controller
     {
+        private IRepository<Category> _categoryRepository;
+
+        public CategoriesController()
+        {
+        }
+
+        public CategoriesController(IRepository<Category> categoryRepository)
+        {
+            _categoryRepository = categoryRepository;
+        }
+
         public ActionResult Index()
         {
-            IRepository<Category> repo = new SqlRepository<Category>(AppManager.Context);
-            return View(repo.FindAll().OrderBy(c => c.Name));
+            //IRepository<Category> repo = new SqlRepository<Category>(AppManager.Context);
+            return View(_categoryRepository.FindAll().OrderBy(c => c.Name));
         }
 
         public ActionResult Show(string name)

@@ -11,23 +11,23 @@ namespace Pizza.DataAccess
     /// </summary>
     public class SqlRepository<T> : IRepository<T> where T : Entity
     {
-        private readonly DbContext context;
+        private readonly DbContext _context;
 
         public SqlRepository(DbContext context)
         {
-            this.context = context;
+            _context = context;
         }
 
         #region IRepository<T> Members
 
         public IQueryable<T> FindAll(Func<T, bool> exp)
         {
-            return context.Set<T>().Where(exp).AsQueryable();
+            return _context.Set<T>().Where(exp).AsQueryable();
         }
 
         public IQueryable<T> FindAll()
         {
-            return context.Set<T>();
+            return _context.Set<T>();
         }
 
         public T FindOne(Func<T, bool> exp)
@@ -41,12 +41,12 @@ namespace Pizza.DataAccess
             {
                 throw new ArgumentNullException("entity", "Entity cannot be null");
             }
-            context.Set<T>().Add(entity);
+            _context.Set<T>().Add(entity);
         }
 
         public void SaveAll()
         {
-            context.SaveChanges();
+            _context.SaveChanges();
         }
 
         public void Delete(T entity)
@@ -55,7 +55,7 @@ namespace Pizza.DataAccess
             {
                 throw new ArgumentNullException("entity", "Entity cannot be null");
             }
-            context.Set<T>().Remove(entity);
+            _context.Set<T>().Remove(entity);
         }
 
         #endregion
